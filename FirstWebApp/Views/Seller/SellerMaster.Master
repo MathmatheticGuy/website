@@ -1,0 +1,97 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SellerMaster.master.cs" Inherits="FirstWebApp.Views.Seller.SellerMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <style>
+        * {
+            font-family: 'FiraCode Nerd Font Propo';
+        }
+
+        #left {
+            color: white;
+            height: 975px;
+            background-color: rosybrown;
+            width: 200px;
+        }
+
+        label {
+            color: white;
+        }
+    </style>
+    <link href="../../Assets/Lib/css/bootstrap.min.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2" id="left">
+
+                <div style="height: 15px"> </div>
+
+                <div style="height:71px">
+                    <img src="../../Assets/Images/shopping-cart.png" height="35" width="35" />
+                </div>
+
+                
+                <div class="p-0" >
+
+                    <div class="mb-4">
+                        <img src="../../Assets/Images/bookShelf.jpg" height="35" width="35" />
+                        <a href="Selling.aspx">
+                            <label>Billings</label>
+                        </a>
+                    </div>
+
+                    <div class="mb-4">
+                        <%-- connect to Author aspx file --%>
+                        <img src="../../Assets/Images/typing.png" height="35" width="35" />
+                        <a href="../Admin/Author.aspx">
+                            <label>Authors </label>
+                        </a>
+                    </div>
+
+                    <div class="mb-4">
+                        <img src="../../Assets/Images/administration.png" height="35" width="35" />
+                        <a href="../Admin/Seller.aspx">
+                            <label>Sellers</label>
+                        </a>
+                    </div>
+
+                    <div class="mb-4">
+                        <img src="../../Assets/Images/category.png" height="35" width="35" />
+                        <a href="../Admin/Categories.aspx">
+                            <label>Categories</label>
+                        </a>
+                    </div>
+
+                    <div style="height: 481px; width: 187px"></div>
+
+                    <div class="mb-4" >
+                        <img src="../../Assets/Images/house_100px.png" height="35" width="35" />
+                        <a href="../Login.aspx" >
+                            <label>Logout </label>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <%-- This is the Content Holder. Take Contents from other file and push it here --%>
+            <div class="col-10">
+                <form id="form1" runat="server">
+                    <div>
+                        <asp:ContentPlaceHolder ID="MyContent" runat="server"> </asp:ContentPlaceHolder>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <%-- container-fluid --%>
+</body>
+</html>
